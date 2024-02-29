@@ -1,0 +1,106 @@
+﻿namespace Quan_ly_cua_hang_FPT_Shop
+{
+    partial class UserControl_KhuyenMaiQuaTang
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panelChinh = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pMaGiamGia = new System.Windows.Forms.Panel();
+            this.btMaGiamGia = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panelChinh
+            // 
+            this.panelChinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelChinh.Location = new System.Drawing.Point(0, 62);
+            this.panelChinh.Name = "panelChinh";
+            this.panelChinh.Size = new System.Drawing.Size(1329, 684);
+            this.panelChinh.TabIndex = 7;
+            this.panelChinh.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChinh_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pMaGiamGia);
+            this.panel1.Controls.Add(this.btMaGiamGia);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1329, 63);
+            this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pMaGiamGia
+            // 
+            this.pMaGiamGia.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pMaGiamGia.Location = new System.Drawing.Point(3, 59);
+            this.pMaGiamGia.Name = "pMaGiamGia";
+            this.pMaGiamGia.Size = new System.Drawing.Size(189, 3);
+            this.pMaGiamGia.TabIndex = 1;
+            // 
+            // btMaGiamGia
+            // 
+            this.btMaGiamGia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btMaGiamGia.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btMaGiamGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMaGiamGia.Font = new System.Drawing.Font("#9Slide02 Tieu de dai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMaGiamGia.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btMaGiamGia.Location = new System.Drawing.Point(0, 0);
+            this.btMaGiamGia.Name = "btMaGiamGia";
+            this.btMaGiamGia.Size = new System.Drawing.Size(189, 61);
+            this.btMaGiamGia.TabIndex = 0;
+            this.btMaGiamGia.Text = "Mã giảm giá";
+            this.btMaGiamGia.UseVisualStyleBackColor = true;
+            this.btMaGiamGia.Click += new System.EventHandler(this.btMaGiamGia_Click);
+            // 
+            // UserControl_KhuyenMaiQuaTang
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panelChinh);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "UserControl_KhuyenMaiQuaTang";
+            this.Size = new System.Drawing.Size(1329, 746);
+            this.Load += new System.EventHandler(this.UserControl_KhuyenMaiQuaTang_Load_1);
+            this.panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Panel panelChinh;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pMaGiamGia;
+        private System.Windows.Forms.Button btMaGiamGia;
+    }
+}

@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FB38019-F971-4579-B2AC-B5A4F9232496}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Quan_ly_cua_hang_FPT_Shop</RootNamespace>
+    <AssemblyName>Quan ly cua hang FPT Shop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSDL\CSDL.cs" />
+    <Compile Include="CSDL\HoaDonBanHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDonBanHang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dang nhap\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dang nhap\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon1.Designer.cs">
+      <DependentUpon>HoaDon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\HoaDonThanhToan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDonThanhToan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Form\InDanhSachNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Form\InDanhSachNhanVien.Designer.cs">
+      <DependentUpon>InDanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Khach hang\UserControl_NVBanHang_KhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Khach hang\UserControl_NVBanHang_KhachHang.Designer.cs">
+      <DependentUpon>UserControl_NVBanHang_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Khach hang\UserControl_NVBanHang_KhachHang_ThongTinKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Khach hang\UserControl_NVBanHang_KhachHang_ThongTinKhachHang.Designer.cs">
+      <DependentUpon>UserControl_NVBanHang_KhachHang_ThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Khuyen mai Qua tang\UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Khuyen mai Qua tang\UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang.Designer.cs">
+      <DependentUpon>UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Khuyen mai Qua tang\UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang_ThongTinKhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Khuyen mai Qua tang\UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang_ThongTinKhuyenMai.Designer.cs">
+      <DependentUpon>UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang_ThongTinKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\ThemKhachHangMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\ThemKhachHangMoi.Designer.cs">
+      <DependentUpon>ThemKhachHangMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang_BanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang_BanHang.Designer.cs">
+      <DependentUpon>UserControl_NVBanHang_QuanLyMatHang_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang_MatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang_MatHang.Designer.cs">
+      <DependentUpon>UserControl_NVBanHang_QuanLyMatHang_MatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho.Designer.cs">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_KiemKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_KiemKe.Designer.cs">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho_KiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_NhapKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_NhapKho.Designer.cs">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho_NhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_XuatKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_XuatKho.Designer.cs">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho_XuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly mat hang\UserControl_NVQLKho_QuanLyMatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV QL kho\Quan ly mat hang\UserControl_NVQLKho_QuanLyMatHang.Designer.cs">
+      <DependentUpon>UserControl_NVQLKho_QuanLyMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV QL kho\Trang chu\TrangChu_NVQLKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV QL kho\Trang chu\TrangChu_NVQLKho.Designer.cs">
+      <DependentUpon>TrangChu_NVQLKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV QL kho\Trang chu\UserControl_TrangChu_NVQLKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV QL kho\Trang chu\UserControl_TrangChu_NVQLKho.Designer.cs">
+      <DependentUpon>UserControl_TrangChu_NVQLKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NV Ban hang\Trang Chu\TrangChu_NVBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Trang Chu\TrangChu_NVBanHang.Designer.cs">
+      <DependentUpon>TrangChu_NVBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Trang Chu\TrangChu_QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Trang Chu\TrangChu_QuanLy.Designer.cs">
+      <DependentUpon>TrangChu_QuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang.Designer.cs">
+      <DependentUpon>UserControl_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang_LichSuMuaHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang_LichSuMuaHang.Designer.cs">
+      <DependentUpon>UserControl_KhachHang_LichSuMuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang_ThietLap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang_ThietLap.Designer.cs">
+      <DependentUpon>UserControl_KhachHang_ThietLap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang_ThongTinKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khach hang\UserControl_KhachHang_ThongTinKhachHang.Designer.cs">
+      <DependentUpon>UserControl_KhachHang_ThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang.Designer.cs">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_DanhSachQuaTang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_DanhSachQuaTang.Designer.cs">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_DanhSachQuaTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_MaGiamGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_MaGiamGia.Designer.cs">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_MaGiamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_ThietLap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_ThietLap.Designer.cs">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_ThietLap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_ThongTinKhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_ThongTinKhuyenMai.Designer.cs">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_ThongTinKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang.Designer.cs">
+      <DependentUpon>UserControl_NVBanHang_QuanLyMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly kho\UserControl_QuanLyKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly kho\UserControl_QuanLyKho.Designer.cs">
+      <DependentUpon>UserControl_QuanLyKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly kho\UserControl_QuanLyKho_TheoDoiTonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly kho\UserControl_QuanLyKho_TheoDoiTonKho.Designer.cs">
+      <DependentUpon>UserControl_QuanLyKho_TheoDoiTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang.Designer.cs">
+      <DependentUpon>UserControl_QuanLyMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_DoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_DoanhThu.Designer.cs">
+      <DependentUpon>UserControl_QuanLyMatHang_DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_MatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_MatHang.Designer.cs">
+      <DependentUpon>UserControl_QuanLyMatHang_MatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_TraCuuDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_TraCuuDonHang.Designer.cs">
+      <DependentUpon>UserControl_QuanLyMatHang_TraCuuDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu.Designer.cs">
+      <DependentUpon>UserControl_QuanLyNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_Luong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_Luong.Designer.cs">
+      <DependentUpon>UserControl_QuanLyNhanSu_Luong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_QuanLyTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>UserControl_QuanLyNhanSu_QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_TangCaNghiPhep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_TangCaNghiPhep.Designer.cs">
+      <DependentUpon>UserControl_QuanLyNhanSu_TangCaNghiPhep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_ThongTinNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_ThongTinNhanVien.Designer.cs">
+      <DependentUpon>UserControl_QuanLyNhanSu_ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_ThuongPhat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_ThuongPhat.Designer.cs">
+      <DependentUpon>UserControl_QuanLyNhanSu_ThuongPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV Ban hang\Trang Chu\UserControl_TrangChu_NVBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV Ban hang\Trang Chu\UserControl_TrangChu_NVBanHang.Designer.cs">
+      <DependentUpon>UserControl_TrangChu_NVBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly\Trang Chu\UserControl_TrangChu_NVQuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan ly\Trang Chu\UserControl_TrangChu_NVQuanLy.Designer.cs">
+      <DependentUpon>UserControl_TrangChu_NVQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InDanhSachNhanVien_CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InDanhSachNhanVien_CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Form\InDanhSachNhanVien_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InDanhSachNhanVien_DataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dang nhap\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon1.resx">
+      <DependentUpon>HoaDon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\HoaDonThanhToan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDonThanhToan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Khach hang\UserControl_NVBanHang_KhachHang.resx">
+      <DependentUpon>UserControl_NVBanHang_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Khach hang\UserControl_NVBanHang_KhachHang_ThongTinKhachHang.resx">
+      <DependentUpon>UserControl_NVBanHang_KhachHang_ThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Khuyen mai Qua tang\UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang.resx">
+      <DependentUpon>UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Khuyen mai Qua tang\UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang_ThongTinKhuyenMai.resx">
+      <DependentUpon>UserControl_NVBanHang_KhachHang_KhuyenMaiQuaTang_ThongTinKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Quan ly mat hang\ThemKhachHangMoi.resx">
+      <DependentUpon>ThemKhachHangMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang_BanHang.resx">
+      <DependentUpon>UserControl_NVBanHang_QuanLyMatHang_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang_MatHang.resx">
+      <DependentUpon>UserControl_NVBanHang_QuanLyMatHang_MatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho.resx">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_KiemKe.resx">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho_KiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_NhapKho.resx">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho_NhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV QL kho\Quan ly kho\UserControl_NVQLKho_QuanLyKho_XuatKho.resx">
+      <DependentUpon>UserControl_NVQLKho_QuanLyKho_XuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV QL kho\Quan ly mat hang\UserControl_NVQLKho_QuanLyMatHang.resx">
+      <DependentUpon>UserControl_NVQLKho_QuanLyMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV QL kho\Trang chu\TrangChu_NVQLKho.resx">
+      <DependentUpon>TrangChu_NVQLKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV QL kho\Trang chu\UserControl_TrangChu_NVQLKho.resx">
+      <DependentUpon>UserControl_TrangChu_NVQLKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="NV Ban hang\Trang Chu\TrangChu_NVBanHang.resx">
+      <DependentUpon>TrangChu_NVBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Trang Chu\TrangChu_QuanLy.resx">
+      <DependentUpon>TrangChu_QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khach hang\UserControl_KhachHang.resx">
+      <DependentUpon>UserControl_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khach hang\UserControl_KhachHang_LichSuMuaHang.resx">
+      <DependentUpon>UserControl_KhachHang_LichSuMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khach hang\UserControl_KhachHang_ThietLap.resx">
+      <DependentUpon>UserControl_KhachHang_ThietLap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khach hang\UserControl_KhachHang_ThongTinKhachHang.resx">
+      <DependentUpon>UserControl_KhachHang_ThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang.resx">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_DanhSachQuaTang.resx">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_DanhSachQuaTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_MaGiamGia.resx">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_MaGiamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_ThietLap.resx">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_ThietLap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Khuyen mai Qua tang\UserControl_KhuyenMaiQuaTang_ThongTinKhuyenMai.resx">
+      <DependentUpon>UserControl_KhuyenMaiQuaTang_ThongTinKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Quan ly mat hang\UserControl_NVBanHang_QuanLyMatHang.resx">
+      <DependentUpon>UserControl_NVBanHang_QuanLyMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly kho\UserControl_QuanLyKho.resx">
+      <DependentUpon>UserControl_QuanLyKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly kho\UserControl_QuanLyKho_TheoDoiTonKho.resx">
+      <DependentUpon>UserControl_QuanLyKho_TheoDoiTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang.resx">
+      <DependentUpon>UserControl_QuanLyMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_DoanhThu.resx">
+      <DependentUpon>UserControl_QuanLyMatHang_DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_MatHang.resx">
+      <DependentUpon>UserControl_QuanLyMatHang_MatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly mat hang\UserControl_QuanLyMatHang_TraCuuDonHang.resx">
+      <DependentUpon>UserControl_QuanLyMatHang_TraCuuDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu.resx">
+      <DependentUpon>UserControl_QuanLyNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_Luong.resx">
+      <DependentUpon>UserControl_QuanLyNhanSu_Luong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_QuanLyTaiKhoan.resx">
+      <DependentUpon>UserControl_QuanLyNhanSu_QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_TangCaNghiPhep.resx">
+      <DependentUpon>UserControl_QuanLyNhanSu_TangCaNghiPhep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_ThongTinNhanVien.resx">
+      <DependentUpon>UserControl_QuanLyNhanSu_ThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Quan ly nhan su\UserControl_QuanLyNhanSu_ThuongPhat.resx">
+      <DependentUpon>UserControl_QuanLyNhanSu_ThuongPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV Ban hang\Trang Chu\UserControl_TrangChu_NVBanHang.resx">
+      <DependentUpon>UserControl_TrangChu_NVBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly\Trang Chu\UserControl_TrangChu_NVQuanLy.resx">
+      <DependentUpon>UserControl_TrangChu_NVQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InDanhSachNhanVien_CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InDanhSachNhanVien_CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Form\InDanhSachNhanVien.resx">
+      <DependentUpon>InDanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CSDL\HoaDonBanHang.xsc">
+      <DependentUpon>HoaDonBanHang.xsd</DependentUpon>
+    </None>
+    <None Include="CSDL\HoaDonBanHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HoaDonBanHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CSDL\HoaDonBanHang.xss">
+      <DependentUpon>HoaDonBanHang.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Report\Form\InDanhSachNhanVien_DataSet.xsc">
+      <DependentUpon>InDanhSachNhanVien_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Form\InDanhSachNhanVien_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InDanhSachNhanVien_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Form\InDanhSachNhanVien_DataSet.xss">
+      <DependentUpon>InDanhSachNhanVien_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Data_security_05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5844.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58441.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d3209e2122472de851c534c609a7884b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d3209e2122472de851c534c609a7884b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\anhdaidien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chien-luoc-Marketing-cua-FPT-Shop-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\Crystal Report\" />
+    <Folder Include="Report\DataSet\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
